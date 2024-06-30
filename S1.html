@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="S1.css">
+      <title>Document</title>
+</head>
+<body >
+      
+      <p id="demo">demo</p>
+
+<div class="range-container">
+      <input  type="range" min="0" max="59" id="rangeInput">
+      <span class="seconds" id="secondsOutput"></span>
+  </div>
+  
+  <div class="calculator">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button class="operator" onclick="clearDisplay()">C</button>
+        <button class="operator" onclick="inputValue('/')">/</button>
+        <button class="operator" onclick="inputValue('*')">*</button>
+        <button class="operator" onclick="deleteLast()">DEL</button>
+        <button onclick="inputValue('7')">7</button>
+        <button onclick="inputValue('8')">8</button>
+        <button onclick="inputValue('9')">9</button>
+        <button class="operator" onclick="inputValue('-')">-</button>
+        <button onclick="inputValue('4')">4</button>
+        <button onclick="inputValue('5')">5</button>
+        <button onclick="inputValue('6')">6</button>
+        <button class="operator" onclick="inputValue('+')">+</button>
+        <button onclick="inputValue('1')">1</button>
+        <button onclick="inputValue('2')">2</button>
+        <button onclick="inputValue('3')">3</button>
+        <button class="operator" onclick="calculateResult()">=</button>
+        <button onclick="inputValue('0')" style="grid-column: span 2;">0</button>
+        <button onclick="inputValue('.')">.</button>
+      </div>
+    </div>
+    
+
+
+    <!-- This is counter panel....  -->
+    
+
+
+<div id="div_count">
+    <p id="count_p">0</p>
+</div>
+<div id="btn_panel" class="btn_panel">
+    <button id="decrease" class="counter dec">decrease</button>
+    <button id="reset" class="counter">reset</button>
+    <button id="increase" class="counter">increase</button>
+</div>
+
+<script>
+     
+  const decs = document.getElementById('decrease');
+  decs.style.backgroundColor = "red";
+  const decs1 = document.getElementById('reset');
+  decs1.style.backgroundColor = "lightblue";
+
+</script>
+
+
+<!-- This is counter panel End -->
+
+<!-- This is 10 min count down timer  -->
+<div id="timer">
+  10:00
+</div>
+
+
+
+
+
+      <script src="S1.js"></script>
+</body>
+</html>
