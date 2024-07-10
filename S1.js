@@ -20,6 +20,9 @@ const currentSeconds = new Date().getSeconds();
 }, 1000);
 
 
+
+
+
 // This is calculator
 
 
@@ -84,6 +87,7 @@ function updateTimer() {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
     seconds = seconds < 10 ? '0' + seconds : seconds;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
     timerElement.innerHTML = `${minutes}:${seconds}`;
     time--;
 
@@ -92,5 +96,27 @@ function updateTimer() {
         timerElement.innerHTML = "Time's up!";
     }
 }
+let timerInterval = setInterval(updateTimer, 1000); 
+ 
+// This is range 
 
-let timerInterval = setInterval(updateTimer, 1000);
+// const slider = document.createElement("input");
+// slider.type = "range";
+// slider.max = 10;
+// slider.value = 0;
+// document.body.appendChild(slider);
+
+// const div = document.createElement("div");
+// document.body.appendChild(div);
+
+
+// slider.oninput = addStars;
+// function addStars(){
+//   div.innerText = "";
+//   for (let i = 0; i < this.value; i++){
+//     div.append("֍");
+//   }
+// }
+
+// this is range end 
+
