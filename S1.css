@@ -188,7 +188,7 @@
 
 @keyframes example {
   from { background-color: red; }
-  to { background-color: yellow; }
+  to { background-color: green; }
 }
 
 
@@ -197,7 +197,97 @@
   height: 100px;
   background-color: red;
   animation: example infinite;
-  animation-duration: 4s;
+  animation-duration: 1s;
   border-radius: 5px;
   color: #fff;
+}
+/* This is text animation complete  */
+
+/* This is the box animation start */
+.box{
+  border: 3px solid orangered;
+  box-sizing: border-box;
+  height: 200px;
+  width: 200px;
+  background-color: #ccc;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.box > h2 {
+  text-align: center;
+  padding-top: 30px;
+  font-weight: 800;
+  font-size: 55px;
+  text-shadow: #f9f9f9;
+  color: white;
+}
+
+.box::before{
+  content: '';
+  position: absolute;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+  width: 20px;
+  height: 30px;
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.box1{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+.box1 h2{
+  color: rgb(226, 226, 226);
+  text-shadow: 2px 2px black;
+  font-size: 8em;
+  z-index: 5;
+}
+
+.box1::before{
+  content: '';
+  position: absolute;
+  width: 170px;
+  height: 120%;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 1s linear infinite ;
+}
+.box1::after{
+  content: '';
+  position: absolute;
+  background: #0e1538 ;
+  inset: 5px;
+  border-radius: 20px;
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
